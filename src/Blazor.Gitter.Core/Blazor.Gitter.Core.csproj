@@ -16,9 +16,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Blazored.LocalStorage" Version="2.1.6" />
-    <PackageReference Include="BlazorComponentUtilities" Version="1.6.0" />
-    <PackageReference Include="Microsoft.TypeScript.MSBuild" Version="3.9.2">
+    <PackageReference Include="Blazored.LocalStorage" Version="3.0.0" />
+    <PackageReference Include="BlazorComponentUtilities" Version="1.7.1" />
+    <PackageReference Include="Microsoft.TypeScript.MSBuild" Version="4.5.2">
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
@@ -42,16 +42,12 @@
   </ItemGroup>
 
   <Target Name="CopyContentFiles" AfterTargets="CompileTypeScript">
-    <Copy SourceFiles="@(JsSourceFiles)" 
-          DestinationFolder="..\Blazor.Gitter.Client\wwwroot\scripts" />
+    <Copy SourceFiles="@(JsSourceFiles)" DestinationFolder="..\Blazor.Gitter.Client\wwwroot\scripts" />
 
-    <Copy SourceFiles="@(JsSourceFiles)" 
-          DestinationFolder="..\Blazor.Gitter.Server\wwwroot\scripts" />
+    <Copy SourceFiles="@(JsSourceFiles)" DestinationFolder="..\Blazor.Gitter.Server\wwwroot\scripts" />
 
-    <Copy SourceFiles="@(CssSourceFiles)" 
-          DestinationFolder="..\Blazor.Gitter.Client\wwwroot\css" />
+    <Copy SourceFiles="@(CssSourceFiles)" DestinationFolder="..\Blazor.Gitter.Client\wwwroot\css" />
 
-    <Copy SourceFiles="@(CssSourceFiles)" 
-          DestinationFolder="..\Blazor.Gitter.Server\wwwroot\css" />
+    <Copy SourceFiles="@(CssSourceFiles)" DestinationFolder="..\Blazor.Gitter.Server\wwwroot\css" />
   </Target>
 </Project>
